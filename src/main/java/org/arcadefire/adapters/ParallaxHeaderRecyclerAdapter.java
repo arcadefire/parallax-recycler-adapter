@@ -39,11 +39,15 @@ public abstract class ParallaxHeaderRecyclerAdapter<T> extends RecyclerView.Adap
 	}
 
 	public void appendAll(List<T> items) {
-		items.addAll(items);
+		if(items != null) {
+			items.addAll(items);
+		}
 	}
 
 	public void append(T item) {
-		items.add(item);
+		if(item != null) {
+			items.add(item);
+		}
 	}
 
 	@Override
